@@ -6,8 +6,15 @@
 }
 
 :root {
-    --primary-color: #6C5CE7;
-    --primary-dark: #5546C8;
+    /* Paleta Roxo */
+    --primary-color: #955CF8;        /* Roxo Lavanda Elétrico */
+    --primary-dark: #4200A5;         /* Roxo Elétrico */
+    --roxo-profundo: #1B0740;
+    --roxo-eletrico: #4200A5;
+    --roxo-lavanda: #955CF8;
+    --azul-noite: #13062F;
+    --preto-azulado: #0B0B17;
+    /* Outras cores */
     --secondary-color: #00D2D3;
     --accent-color: #FD79A8;
     --success-color: #00B894;
@@ -236,9 +243,22 @@ body {
 
 .cta-buttons {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
     margin-bottom: 30px;
-    flex-wrap: wrap;
+}
+
+.cta-link {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.cta-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .trust-badges {
@@ -274,7 +294,7 @@ body {
 .phone-screen img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Urgency Banner */
@@ -1057,12 +1077,12 @@ section {
     .hero-image {
         order: -1;
     }
-    
+
     .mockup-phone {
         max-width: 300px;
         margin: 0 auto;
     }
-    
+
     .phone-screen {
         height: 400px;
     }
